@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Marathon Dashboard — Branco</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.5.0/dist/chart.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gridjs@5.0.2/dist/gridjs.umd.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/gridjs@5.0.2/dist/theme/mermaid.min.css" rel="stylesheet">
+<style>
+:root { color-scheme: light;
+  --bg:#f6f7f9; --card:#ffffff; --ink:#1a2330; --muted:#66707d; --line:#e5e8ec;
+  --accent:#e8590c; --accent2:#1971c2; --good:#2f9e44; --warn:#e8590c; --bad:#c92a2a;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.45 -apple-system,"Segoe UI",Roboto,sans-serif;padding:16px;max-width:1100px;margin:0 auto}
+h1{font-size:19px;margin:0}
+h2{font-size:14px;margin:0 0 10px;color:var(--ink);text-transform:uppercase;letter-spacing:.04em}
+.sub{color:var(--muted);font-size:12px}
+.grid{display:grid;gap:12px}
+.cards{grid-template-columns:repeat(auto-fit,minmax(140px,1fr));margin:14px 0}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px 14px}
+.kpi .v{font-size:22px;font-weight:700;margin-top:2px}
+.kpi .l{color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.05em}
+.kpi .s{font-size:11px;color:var(--muted);margin-top:2px}
+.row2{grid-template-columns:1fr 1fr}
+@media(max-width:760px){.row2{grid-template-columns:1fr}}
+.chartbox{height:230px;position:relative}
+.progressbar{height:10px;background:#eef0f3;border-radius:5px;overflow:hidden;margin:6px 0 4px}
+.progressbar>div{height:100%;border-radius:5px}
+.badge{display:inline-block;padding:2px 8px;border-radius:10px;font-size:11px;font-weight:600}
+.badge.good{background:#e6f4ea;color:var(--good)}
+.badge.warn{background:#fdeee3;color:var(--warn)}
+.badge.bad{background:#fbe9e9;color:var(--bad)}
+.prs{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+.pr{background:#f2f4f7;border-radius:8px;padding:6px 10px;font-size:12px}
+.pr b{display:block;font-size:13px}
+#status{padding:30px;text-align:center;color:var(--muted)}
+#err{display:none;padding:14px;background:#fbe9e9;color:var(--bad);border-radius:8px;margin-bottom:12px;white-space:pre-wrap}
+#app{display:none}
+table.gridjs-table{font-size:12.5px}
+.gridjs-wrapper{box-shadow:none;border:1px solid var(--line);border-radius:8px}
+footer{margin-top:14px;color:var(--muted);font-size:11px}
+.ctl{font-size:12px;color:var(--muted)}
+.ctl input{border:1px solid var(--line);border-radius:6px;padding:3px 6px;font-size:12px}
+</style>
+</head>
+<body>
+<div style="display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:8px">
+  <div>
+    <h1>🏃 Marathon Dashboard — doel 3:05 op 1 november</h1>
+    <div class="sub">Data uit Garmin Connect · doeltempo 4:23 /km · <span id="gen"></span></div>
+  </div>
+  <div class="ctl">Start opbouw: <input type="date" id="startDate"></div>
+</div>
+
+<div id="status">Data laden…</div>
+<div id="err"></div>
+
+<div id="app">
+  <div class="grid cards" id="kpis"></div>
+
+  <div class="grid row2">
+    <div class="card">
+      <h2>Marathonvoortgang</h2>
+      <div id="prediction"></div>
+      <div class="prs" id="prs"></div>
+    </div>
+    <div class="card">
+      <h2>Belasting &amp; balans</h2>
+      <div id="load"></div>
+    </div>
+  </div>
+
+  <div class="card" style="margin-top:12px">
+    <h2>Weekvolume hardlopen</h2>
+    <div class="chartbox"><canvas id="volChart"></canvas></div>
+  </div>
+
+  <div class="grid row2" style="margin-top:12px">
+    <div class="card">
+      <h2>Andere sporten (uren per week)</h2>
+      <div class="chartbox"><canvas id="crossChart"></canvas></div>
+    </div>
+    <div class="card">
+      <h2>Herstel — laatste 7 dagen</h2>
+      <div class="chartbox"><canvas id="recChart"></canvas></div>
+    </div>
+  </div>
+
+  <div class="card" style="margin-top:12px">
+    <h2>Recente activiteiten</h2>
+    <div id="acts"></div>
+  </div>
+
+  <footer>Voorspelling is indicatief (Riegel-formule o.b.v. beste recente duurloop). PR’s: handmatig ingevoerde records.</footer>
+</div>
+
+<script>
+const RACE = new Date('2026-11-01T09:00:00');
+const GOAL_S = 3*3600 + 5*60;                 // 3:05:00
+const GOAL_PACE = GOAL_S / 42.195;            // s per km
+const PRS = [['1 km','3:14'],['5 km','19:32'],['10 km','41:17'],['21,1 km','1:34:31'],['42,2 km','3:28:17']];
+
+const $ = id => document.getElementById(id);
+const pad = n => String(n).padStart(2,'0');
+function fmtDur(s){ s=Math.round(s); const h=Math.floor(s/3600), m=Math.floor(s%3600/60); return h? h+':'+pad(m)+':'+pad(s%60) : m+':'+pad(s%60); }
+function fmtPace(spk){ if(!isFinite(spk)) return '–'; const m=Math.floor(spk/60); return m+':'+pad(Math.round(spk%60))+' /km'; }
+function dt(s){ return new Date(s.replace(' ','T')); }
+function weekStart(d){ const x=new Date(d); const day=(x.getDay()+6)%7; x.setDate(x.getDate()-day); x.setHours(0,0,0,0); return x; }
+
+function kpi(l,v,s){ return `<div class="card kpi"><div class="l">${l}</div><div class="v">${v}</div><div class="s">${s||''}</div></div>`; }
+
+function build(acts,daily){
+  const runs = acts.filter(a=>a.type==='running' && a.distanceKm);
+  const now = new Date();
+  const daysLeft = Math.ceil((RACE-now)/864e5);
+  const wkStartNow = weekStart(now);
+  const thisWeekKm = runs.filter(a=>dt(a.startTimeLocal)>=wkStartNow).reduce((s,a)=>s+a.distanceKm,0);
+
+  const weeks = new Map();
+  for(const a of acts){
+    const w = weekStart(dt(a.startTimeLocal)).toISOString().slice(0,10);
+    if(!weeks.has(w)) weeks.set(w,{runKm:0,runS:0,cross:{}});
+    const o = weeks.get(w);
+    if(a.type==='running'){ o.runKm+=a.distanceKm||0; o.runS+=a.durationSeconds||0; }
+    else {
+      const g = (a.type||'').includes('swim')?'Zwemmen': a.type==='cycling'?'Fietsen': a.type==='strength_training'?'Kracht': a.type==='walking'?'Wandelen':'Overig';
+      o.cross[g]=(o.cross[g]||0)+(a.durationSeconds||0)/3600;
+    }
+  }
+  const wkeys=[...weeks.keys()].sort();
+  const wlabels=wkeys.map(k=>{const d=new Date(k);return d.getDate()+'/'+(d.getMonth()+1);});
+
+  const kmSince=days=>runs.filter(a=>dt(a.startTimeLocal)>=new Date(now-days*864e5)).reduce((s,a)=>s+a.distanceKm,0);
+  const acute=kmSince(7), chronic=kmSince(28)/4, acwr=chronic? acute/chronic : null;
+
+  const recent=runs.filter(a=>dt(a.startTimeLocal)>=new Date(now-56*864e5));
+  let base=recent.filter(a=>a.distanceKm>=15);
+  if(!base.length) base=recent.filter(a=>a.distanceKm>=10);
+  let predHtml='<div class="sub">Nog geen duurloop ≥10 km in de laatste 8 weken gevonden.</div>';
+  if(base.length){
+    const best=base.reduce((b,a)=>(a.durationSeconds/a.distanceKm)<(b.durationSeconds/b.distanceKm)?a:b);
+    const predS=best.durationSeconds*Math.pow(42.195/best.distanceKm,1.06);
+    const diff=predS-GOAL_S;
+    const cls=diff<=0?'good':(diff<=420?'warn':'bad');
+    const txt=diff<=0?'op schema':'+'+fmtDur(diff)+' t.o.v. doel';
+    const pct=Math.max(0,Math.min(100,100*GOAL_S/predS));
+    predHtml=`
+      <div style="font-size:26px;font-weight:700">${fmtDur(predS)} <span class="badge ${cls}">${txt}</span></div>
+      <div class="progressbar"><div style="width:${pct}%;background:${diff<=0?'var(--good)':'var(--accent)'}"></div></div>
+      <div class="sub">Voorspelde marathontijd o.b.v. ${best.distanceKm.toFixed(1)} km op ${dt(best.startTimeLocal).toLocaleDateString('nl-NL',{day:'numeric',month:'short'})} @ ${fmtPace(best.durationSeconds/best.distanceKm)} · doel 3:05:00 (${fmtPace(GOAL_PACE)})</div>`;
+  }
+  $('prediction').innerHTML=predHtml;
+  $('prs').innerHTML='<div class="pr" style="width:100%;background:none;padding:0"><b style="font-size:11px;color:var(--muted);text-transform:uppercase">PR’s</b></div>'+PRS.map(p=>`<div class="pr">${p[0]}<b>${p[1]}</b></div>`).join('');
+
+  const acwrCls=acwr==null?'':acwr<0.8?'warn':acwr<=1.3?'good':'bad';
+  const acwrTxt=acwr==null?'–':acwr<0.8?'ruimte voor meer':acwr<=1.3?'gebalanceerd':'let op: piek in belasting';
+  const crossH=acts.filter(a=>a.type!=='running'&&dt(a.startTimeLocal)>=new Date(now-7*864e5)).reduce((s,a)=>s+(a.durationSeconds||0)/3600,0);
+  $('load').innerHTML=`
+    <div style="font-size:26px;font-weight:700">${acwr?acwr.toFixed(2):'–'} <span class="badge ${acwrCls}">${acwrTxt}</span></div>
+    <div class="sub" style="margin-bottom:8px">Acute:chronische ratio (7d ${acute.toFixed(0)} km vs 4-weeks gem. ${chronic.toFixed(0)} km/wk)</div>
+    <div class="sub">Cross-training laatste 7 dagen: <b>${crossH.toFixed(1)} u</b> (zwemmen/fietsen/kracht e.d.)</div>`;
+
+  const last=daily[daily.length-1]||{}, lastSleep=[...daily].reverse().find(d=>d.sleep&&d.sleep.sleepScore);
+  const rhr=(last.hr&&last.hr.lastSevenDaysAvgRestingHeartRate)||(lastSleep&&lastSleep.sleep.restingHeartRate)||'–';
+  $('kpis').innerHTML=[
+    kpi('Dagen tot marathon',daysLeft,Math.ceil(daysLeft/7)+' weken'),
+    kpi('Deze week',thisWeekKm.toFixed(1)+' km','hardlopen (wk start ma)'),
+    kpi('Laatste 7 dagen',acute.toFixed(1)+' km',runs.filter(a=>dt(a.startTimeLocal)>=new Date(now-7*864e5)).length+' looptrainingen'),
+    kpi('Rusthartslag',rhr+' bpm','7-daags gemiddelde'),
+    kpi('Slaapscore',lastSleep?lastSleep.sleep.sleepScore:'–',lastSleep?fmtDur(lastSleep.sleep.totalSleepMinutes*60)+' slaap ('+new Date(lastSleep.date).toLocaleDateString('nl-NL',{day:'numeric',month:'short'})+')':''),
+  ].join('');
+
+  new Chart($('volChart'),{type:'bar',data:{labels:wlabels,datasets:[
+    {label:'km per week',data:wkeys.map(k=>+weeks.get(k).runKm.toFixed(1)),backgroundColor:'#e8590c99',borderColor:'#e8590c',borderWidth:1,yAxisID:'y'},
+    {label:'gem. tempo (s/km)',type:'line',data:wkeys.map(k=>{const o=weeks.get(k);return o.runKm?+(o.runS/o.runKm).toFixed(0):null}),borderColor:'#1971c2',backgroundColor:'#1971c2',tension:.3,spanGaps:true,yAxisID:'y2',pointRadius:3}
+  ]},options:{responsive:true,maintainAspectRatio:false,plugins:{tooltip:{callbacks:{label:c=>c.dataset.yAxisID==='y2'?'gem. tempo: '+fmtPace(c.parsed.y):c.dataset.label+': '+c.parsed.y}}},
+    scales:{y:{title:{display:true,text:'km'}},y2:{position:'right',reverse:true,grid:{display:false},ticks:{callback:v=>fmtPace(v)}}}}});
+
+  const groups=['Zwemmen','Fietsen','Kracht','Wandelen','Overig'];
+  const colors={Zwemmen:'#1971c2',Fietsen:'#2f9e44',Kracht:'#845ef7',Wandelen:'#adb5bd',Overig:'#f59f00'};
+  new Chart($('crossChart'),{type:'bar',data:{labels:wlabels,datasets:groups.map(g=>({label:g,data:wkeys.map(k=>+(weeks.get(k).cross[g]||0).toFixed(2)),backgroundColor:colors[g],stack:'s'}))},
+    options:{responsive:true,maintainAspectRatio:false,scales:{x:{stacked:true},y:{stacked:true,title:{display:true,text:'uren'}}}}});
+
+  new Chart($('recChart'),{data:{labels:daily.map(d=>new Date(d.date).toLocaleDateString('nl-NL',{weekday:'short'})),datasets:[
+    {type:'line',label:'Slaapscore',data:daily.map(d=>d.sleep?d.sleep.sleepScore:null),borderColor:'#845ef7',tension:.3,spanGaps:true},
+    {type:'line',label:'Rusthartslag',data:daily.map(d=>d.hr?d.hr.restingHeartRate:null),borderColor:'#c92a2a',tension:.3,spanGaps:true},
+    {type:'line',label:'HRV',data:daily.map(d=>d.sleep?d.sleep.avgOvernightHrv:null),borderColor:'#2f9e44',tension:.3,spanGaps:true},
+    {type:'bar',label:'Stappen (×1000)',data:daily.map(d=>d.steps?+(d.steps.steps/1000).toFixed(1):null),backgroundColor:'#dee2e6'}
+  ]},options:{responsive:true,maintainAspectRatio:false}});
+
+  const typeNL=t=>({running:'Hardlopen',cycling:'Fietsen',lap_swimming:'Zwemmen',open_water_swimming:'Zwemmen (ow)',strength_training:'Kracht',walking:'Wandelen',hiit:'HIIT',bouldering:'Boulderen',multi_sport:'Multisport',trail_running:'Trail',resort_skiing:'Skiën',hiking:'Hiken',indoor_cycling:'Indoor fietsen'})[t]||t;
+  new gridjs.Grid({
+    columns:['Datum','Activiteit','Type',{name:'km',formatter:v=>v??'–'},'Tempo/duur','HR'],
+    data:acts.slice(0,40).map(a=>[
+      dt(a.startTimeLocal).toLocaleDateString('nl-NL',{day:'2-digit',month:'short'}),
+      a.activityName, typeNL(a.type),
+      a.distanceKm?a.distanceKm.toFixed(2):null,
+      a.type==='running'&&a.distanceKm?fmtPace(a.durationSeconds/a.distanceKm):fmtDur(a.durationSeconds),
+      a.averageHR||'–']),
+    sort:true, pagination:{limit:10}, style:{th:{padding:'8px 10px'},td:{padding:'6px 10px'}}
+  }).render($('acts'));
+}
+
+async function main(){
+  const inp=$('startDate');
+  inp.value=localStorage.getItem('buildupStart')||'2026-04-01';
+  inp.onchange=()=>{localStorage.setItem('buildupStart',inp.value);location.reload();};
+  try{
+    const resp=await fetch('data.json?v='+Date.now());
+    if(!resp.ok) throw new Error('data.json niet gevonden ('+resp.status+')');
+    const data=await resp.json();
+    const since=new Date(inp.value+'T00:00:00');
+    const acts=(data.activities||[]).filter(a=>dt(a.startTimeLocal)>=since);
+    $('gen').textContent='bijgewerkt: '+new Date(data.generated).toLocaleString('nl-NL',{day:'numeric',month:'short',hour:'2-digit',minute:'2-digit'});
+    $('status').style.display='none'; $('app').style.display='block';
+    build(acts,data.daily||[]);
+  }catch(e){
+    $('status').style.display='none'; $('err').style.display='block';
+    $('err').textContent='Kon data niet laden: '+e.message;
+  }
+}
+main();
+</script>
+</body>
+</html>
