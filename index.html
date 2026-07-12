@@ -444,6 +444,13 @@ async function main(){
   }
 }
 main();
+// autorefresh: elke 15 min herladen zolang de pagina open staat
+setInterval(()=>location.reload(), 15*60*1000);
+// en direct verversen wanneer je terugkeert naar het tabblad na >10 min
+let lastLoad=Date.now();
+document.addEventListener('visibilitychange',()=>{
+  if(document.visibilityState==='visible' && Date.now()-lastLoad>10*60*1000) location.reload();
+});
 </script>
 </body>
 </html>
