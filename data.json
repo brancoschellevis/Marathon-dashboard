@@ -1,1199 +1,152 @@
 {
- "generated": "2026-07-13T18:04:01",
- "daily": [
-  {
-   "date": "2026-07-07",
-   "sleep": {
-    "sleepScore": 69,
-    "totalSleepMinutes": 460,
-    "avgOvernightHrv": 51,
-    "restingHeartRate": 50
-   },
-   "hr": {
-    "restingHeartRate": 50,
-    "lastSevenDaysAvgRestingHeartRate": 50
-   },
-   "steps": {
-    "steps": 4704
-   }
-  },
-  {
-   "date": "2026-07-08",
-   "sleep": {
-    "sleepScore": 69,
-    "totalSleepMinutes": 414,
-    "avgOvernightHrv": 55,
-    "restingHeartRate": 48
-   },
-   "hr": {
-    "restingHeartRate": 48,
-    "lastSevenDaysAvgRestingHeartRate": 50
-   },
-   "steps": {
-    "steps": 16441
-   }
-  },
-  {
-   "date": "2026-07-09",
-   "sleep": {
-    "sleepScore": 73,
-    "totalSleepMinutes": 398,
-    "avgOvernightHrv": 50,
-    "restingHeartRate": 52
-   },
-   "hr": {
-    "restingHeartRate": 52,
-    "lastSevenDaysAvgRestingHeartRate": 50
-   },
-   "steps": {
-    "steps": 3897
-   }
-  },
-  {
-   "date": "2026-07-10",
-   "sleep": {
-    "sleepScore": 76,
-    "totalSleepMinutes": 425,
-    "avgOvernightHrv": 51,
-    "restingHeartRate": 54
-   },
-   "hr": {
-    "restingHeartRate": 54,
-    "lastSevenDaysAvgRestingHeartRate": 51
-   },
-   "steps": {
-    "steps": 12077
-   }
-  },
-  {
-   "date": "2026-07-11",
-   "sleep": {
-    "sleepScore": 41,
-    "totalSleepMinutes": 289,
-    "avgOvernightHrv": 24,
-    "restingHeartRate": 55
-   },
-   "hr": {
-    "restingHeartRate": 55,
-    "lastSevenDaysAvgRestingHeartRate": 52
-   },
-   "steps": {
-    "steps": 13248
-   }
-  },
-  {
-   "date": "2026-07-12",
-   "sleep": {
-    "sleepScore": 75,
-    "totalSleepMinutes": 474,
-    "avgOvernightHrv": 37,
-    "restingHeartRate": 55
-   },
-   "hr": {
-    "restingHeartRate": 55,
-    "lastSevenDaysAvgRestingHeartRate": 52
-   },
-   "steps": {
-    "steps": 17971
-   }
-  },
-  {
-   "date": "2026-07-13",
-   "sleep": {
-    "sleepScore": 81,
-    "totalSleepMinutes": 416,
-    "avgOvernightHrv": 47,
-    "restingHeartRate": 53
-   },
-   "hr": {
-    "restingHeartRate": 53,
-    "lastSevenDaysAvgRestingHeartRate": 52
-   },
-   "steps": {
-    "steps": 3441
-   }
-  }
- ],
- "activities": [
-  {
-   "activityName": "Zwembad",
-   "startTimeLocal": "2026-07-13 07:31:35",
-   "type": "lap_swimming",
-   "distanceKm": 1.23,
-   "durationSeconds": 2035,
-   "averageHR": 117
-  },
-  {
-   "activityName": "Westland Hardlopen",
-   "startTimeLocal": "2026-07-12 22:05:02",
-   "type": "running",
-   "distanceKm": 7.05,
-   "durationSeconds": 2100,
-   "averageHR": 138
-  },
-  {
-   "activityName": "Westland Hardlopen",
-   "startTimeLocal": "2026-07-12 13:48:09",
-   "type": "running",
-   "distanceKm": 10.7,
-   "durationSeconds": 3070,
-   "averageHR": 141
-  },
-  {
-   "activityName": "Den Haag Fietsen",
-   "startTimeLocal": "2026-07-12 00:22:15",
-   "type": "cycling",
-   "distanceKm": 8.85,
-   "durationSeconds": 2125,
-   "averageHR": 66
-  },
-  {
-   "activityName": "Westland Fietsen",
-   "startTimeLocal": "2026-07-10 19:58:57",
-   "type": "cycling",
-   "distanceKm": 6.33,
-   "durationSeconds": 971,
-   "averageHR": 128
-  },
-  {
-   "activityName": "Den Haag - Interval 7 juli 2026",
-   "startTimeLocal": "2026-07-08 16:50:02",
-   "type": "running",
-   "distanceKm": 11.36,
-   "durationSeconds": 3300,
-   "averageHR": 150
-  },
-  {
-   "activityName": "Zwembad",
-   "startTimeLocal": "2026-07-07 08:16:52",
-   "type": "lap_swimming",
-   "distanceKm": 1.1,
-   "durationSeconds": 2115,
-   "averageHR": 121
-  },
-  {
-   "activityName": "Westland Hardlopen",
-   "startTimeLocal": "2026-07-06 19:37:59",
-   "type": "running",
-   "distanceKm": 11.56,
-   "durationSeconds": 4310,
-   "averageHR": 136
-  },
-  {
-   "activityName": "Raalte Hardlopen",
-   "startTimeLocal": "2026-07-05 17:00:09",
-   "type": "running",
-   "distanceKm": 7.03,
-   "durationSeconds": 2065,
-   "averageHR": 145
-  },
-  {
-   "activityName": "Raalte Hardlopen",
-   "startTimeLocal": "2026-07-04 07:46:32",
-   "type": "running",
-   "distanceKm": 21.22,
-   "durationSeconds": 7385,
-   "averageHR": 129
-  },
-  {
-   "activityName": "Rotterdam Hardlopen",
-   "startTimeLocal": "2026-06-29 19:37:09",
-   "type": "running",
-   "distanceKm": 12.06,
-   "durationSeconds": 4115,
-   "averageHR": 144
-  },
-  {
-   "activityName": "Zwembad",
-   "startTimeLocal": "2026-06-29 07:30:37",
-   "type": "lap_swimming",
-   "distanceKm": 2,
-   "durationSeconds": 3141,
-   "averageHR": 131
-  },
-  {
-   "activityName": "Den Haag Fietsen",
-   "startTimeLocal": "2026-06-28 20:38:50",
-   "type": "cycling",
-   "distanceKm": 8.98,
-   "durationSeconds": 1863,
-   "averageHR": 74
-  },
-  {
-   "activityName": "Westland Fietsen",
-   "startTimeLocal": "2026-06-28 16:51:34",
-   "type": "cycling",
-   "distanceKm": 8.64,
-   "durationSeconds": 1287,
-   "averageHR": 115
-  },
-  {
-   "activityName": "Westland Fietsen",
-   "startTimeLocal": "2026-06-28 12:13:50",
-   "type": "cycling",
-   "distanceKm": 1.89,
-   "durationSeconds": 279,
-   "averageHR": 126
-  },
-  {
-   "activityName": "Westland Hardlopen",
-   "startTimeLocal": "2026-06-28 09:42:04",
-   "type": "running",
-   "distanceKm": 24.31,
-   "durationSeconds": 7636,
-   "averageHR": 147
-  },
-  {
-   "activityName": "Rotterdam Fietsen",
-   "startTimeLocal": "2026-06-27 02:41:52",
-   "type": "cycling",
-   "distanceKm": 30.05,
-   "durationSeconds": 4869,
-   "averageHR": 109
-  },
-  {
-   "activityName": "Rotterdam Zwemmen in open water",
-   "startTimeLocal": "2026-06-26 18:40:23",
-   "type": "open_water_swimming",
-   "distanceKm": 0.75,
-   "durationSeconds": 1176,
-   "averageHR": 137
-  },
-  {
-   "activityName": "Rotterdam Fietsen",
-   "startTimeLocal": "2026-06-26 18:18:19",
-   "type": "cycling",
-   "distanceKm": 2.09,
-   "durationSeconds": 425,
-   "averageHR": 115
-  },
-  {
-   "activityName": "Maassluis Fietsen",
-   "startTimeLocal": "2026-06-26 00:18:37",
-   "type": "cycling",
-   "distanceKm": 12.49,
-   "durationSeconds": 1823,
-   "averageHR": 122
-  },
-  {
-   "activityName": "Westland Fietsen",
-   "startTimeLocal": "2026-06-25 08:52:05",
-   "type": "cycling",
-   "distanceKm": 12.52,
-   "durationSeconds": 1777,
-   "averageHR": 129
-  },
-  {
-   "activityName": "Zwembad",
-   "startTimeLocal": "2026-06-25 07:14:38",
-   "type": "lap_swimming",
-   "distanceKm": 2.05,
-   "durationSeconds": 3255,
-   "averageHR": 129
-  },
-  {
-   "activityName": "Westland Hardlopen",
-   "startTimeLocal": "2026-06-24 06:52:39",
-   "type": "running",
-   "distanceKm": 14.35,
-   "durationSeconds": 4560,
-   "averageHR": 140
-  },
-  {
-   "activityName": "Westland Hardlopen",
-   "startTimeLocal": "2026-06-23 16:41:59",
-   "type": "running",
-   "distanceKm": 4.02,
-   "durationSeconds": 1250,
-   "averageHR": 135
-  },
-  {
-   "activityName": "Westland Fietsen",
-   "startTimeLocal": "2026-06-23 08:53:53",
-   "type": "cycling",
-   "distanceKm": 2.98,
-   "durationSeconds": 523,
-   "averageHR": 118
-  },
-  {
-   "activityName": "Zwembad",
-   "startTimeLocal": "2026-06-23 07:39:41",
-   "type": "lap_swimming",
-   "distanceKm": 2,
-   "durationSeconds": 3110,
-   "averageHR": 140
-  },
-  {
-   "activityName": "Westland Fietsen",
-   "startTimeLocal": "2026-06-23 07:23:22",
-   "type": "cycling",
-   "distanceKm": 2.93,
-   "durationSeconds": 431,
-   "averageHR": 115
-  },
-  {
-   "activityName": "Westland Hardlopen",
-   "startTimeLocal": "2026-06-22 19:36:56",
-   "type": "running",
-   "distanceKm": 11.67,
-   "durationSeconds": 4221,
-   "averageHR": 137
-  },
-  {
-   "activityName": "Westland Hardlopen",
-   "startTimeLocal": "2026-06-20 08:16:32",
-   "type": "running",
-   "distanceKm": 22.4,
-   "durationSeconds": 8185,
-   "averageHR": 148
-  },
-  {
-   "activityName": "Zwembad",
-   "startTimeLocal": "2026-06-18 07:30:38",
-   "type": "lap_swimming",
-   "distanceKm": 2.05,
-   "durationSeconds": 3230,
-   "averageHR": 136
-  },
-  {
-   "activityName": "Den Haag Hardlopen",
-   "startTimeLocal": "2026-06-17 17:00:02",
-   "type": "running",
-   "distanceKm": 8.34,
-   "durationSeconds": 2566,
-   "averageHR": 137
-  },
-  {
-   "activityName": "Zwembad",
-   "startTimeLocal": "2026-06-16 08:08:52",
-   "type": "lap_swimming",
-   "distanceKm": 2.03,
-   "durationSeconds": 3590,
-   "averageHR": 130
-  },
-  {
-   "activityName": "Midden-Delfland Hardlopen",
-   "startTimeLocal": "2026-06-15 19:39:21",
-   "type": "running",
-   "distanceKm": 12.7,
-   "durationSeconds": 4120,
-   "averageHR": 135
-  },
-  {
-   "activityName": "Westland Wandelen",
-   "startTimeLocal": "2026-06-14 14:35:40",
-   "type": "walking",
-   "distanceKm": 3.44,
-   "durationSeconds": 2640,
-   "averageHR": 82
-  },
-  {
-   "activityName": "Delft Wandelen",
-   "startTimeLocal": "2026-06-13 23:04:52",
-   "type": "walking",
-   "distanceKm": 2.03,
-   "durationSeconds": 1341,
-   "averageHR": 98
-  },
-  {
-   "activityName": "Den Haag Hardlopen",
-   "startTimeLocal": "2026-06-13 10:20:19",
-   "type": "running",
-   "distanceKm": 13.32,
-   "durationSeconds": 4080,
-   "averageHR": 141
-  },
-  {
-   "activityName": "Westland Hardlopen",
-   "startTimeLocal": "2026-06-11 17:05:54",
-   "type": "running",
-   "distanceKm": 8.11,
-   "durationSeconds": 2521,
-   "averageHR": 146
-  },
-  {
-   "activityName": "Westland Fietsen",
-   "startTimeLocal": "2026-06-11 08:23:06",
-   "type": "cycling",
-   "distanceKm": 2.98,
-   "durationSeconds": 481,
-   "averageHR": 114
-  },
-  {
-   "activityName": "Zwembad",
-   "startTimeLocal": "2026-06-11 07:17:44",
-   "type": "lap_swimming",
-   "distanceKm": 2.03,
-   "durationSeconds": 2990,
-   "averageHR": 139
-  },
-  {
-   "activityName": "Westland Fietsen",
-   "startTimeLocal": "2026-06-11 06:59:17",
-   "type": "cycling",
-   "distanceKm": 2.94,
-   "durationSeconds": 479,
-   "averageHR": 112
-  },
-  {
-   "activityName": "Westland Fietsen",
-   "startTimeLocal": "2026-06-09 19:49:49",
-   "type": "cycling",
-   "distanceKm": 4.76,
-   "durationSeconds": 717,
-   "averageHR": 104
-  },
-  {
-   "activityName": "Westland Fietsen",
-   "startTimeLocal": "2026-06-09 08:17:03",
-   "type": "cycling",
-   "distanceKm": 5.31,
-   "durationSeconds": 781,
-   "averageHR": 126
-  },
-  {
-   "activityName": "Zwembad",
-   "startTimeLocal": "2026-06-09 07:02:43",
-   "type": "lap_swimming",
-   "distanceKm": 2.05,
-   "durationSeconds": 3000,
-   "averageHR": 123
-  },
-  {
-   "activityName": "Westland Fietsen",
-   "startTimeLocal": "2026-06-09 06:45:21",
-   "type": "cycling",
-   "distanceKm": 3.17,
-   "durationSeconds": 542,
-   "averageHR": 87
-  },
-  {
-   "activityName": "Westland Hardlopen",
-   "startTimeLocal": "2026-06-08 19:34:26",
-   "type": "running",
-   "distanceKm": 12.18,
-   "durationSeconds": 4180,
-   "averageHR": 131
-  },
-  {
-   "activityName": "Westland Hardlopen",
-   "startTimeLocal": "2026-06-07 14:43:46",
-   "type": "running",
-   "distanceKm": 5.06,
-   "durationSeconds": 1570,
-   "averageHR": 134
-  },
-  {
-   "activityName": "Westland Fietsen",
-   "startTimeLocal": "2026-06-06 15:02:16",
-   "type": "cycling",
-   "distanceKm": 1.31,
-   "durationSeconds": 272,
-   "averageHR": 109
-  },
-  {
-   "activityName": "HIIT",
-   "startTimeLocal": "2026-06-06 13:58:11",
-   "type": "hiit",
-   "distanceKm": null,
-   "durationSeconds": 2900,
-   "averageHR": 133
-  },
-  {
-   "activityName": "Westland Fietsen",
-   "startTimeLocal": "2026-06-06 13:24:36",
-   "type": "cycling",
-   "distanceKm": 5.49,
-   "durationSeconds": 940,
-   "averageHR": 121
-  },
-  {
-   "activityName": "Westland Fietsen",
-   "startTimeLocal": "2026-06-05 23:18:39",
-   "type": "cycling",
-   "distanceKm": 6.09,
-   "durationSeconds": 970,
-   "averageHR": 78
-  },
-  {
-   "activityName": "Westland Fietsen",
-   "startTimeLocal": "2026-06-05 20:21:09",
-   "type": "cycling",
-   "distanceKm": 5.31,
-   "durationSeconds": 970,
-   "averageHR": 123
-  },
-  {
-   "activityName": "Den Haag Fietsen",
-   "startTimeLocal": "2026-06-05 18:52:20",
-   "type": "cycling",
-   "distanceKm": 2.17,
-   "durationSeconds": 401,
-   "averageHR": 120
-  },
-  {
-   "activityName": "Den Haag - Interval training 5 juni",
-   "startTimeLocal": "2026-06-05 17:37:27",
-   "type": "running",
-   "distanceKm": 11.07,
-   "durationSeconds": 3340,
-   "averageHR": 154
-  },
-  {
-   "activityName": "Zwembad",
-   "startTimeLocal": "2026-06-04 07:44:17",
-   "type": "lap_swimming",
-   "distanceKm": 1.6,
-   "durationSeconds": 2430,
-   "averageHR": 127
-  },
-  {
-   "activityName": "Westland Hardlopen",
-   "startTimeLocal": "2026-06-02 17:00:45",
-   "type": "running",
-   "distanceKm": 17.02,
-   "durationSeconds": 5136,
-   "averageHR": 144
-  },
-  {
-   "activityName": "Westland Hardlopen",
-   "startTimeLocal": "2026-06-01 19:36:15",
-   "type": "running",
-   "distanceKm": 13.05,
-   "durationSeconds": 4056,
-   "averageHR": 145
-  },
-  {
-   "activityName": "Westland Wandelen",
-   "startTimeLocal": "2026-06-01 17:02:26",
-   "type": "walking",
-   "distanceKm": 0.71,
-   "durationSeconds": 1035,
-   "averageHR": 78
-  },
-  {
-   "activityName": "Arnhem Wandelen",
-   "startTimeLocal": "2026-05-31 14:12:58",
-   "type": "walking",
-   "distanceKm": 1,
-   "durationSeconds": 1065,
-   "averageHR": 91
-  },
-  {
-   "activityName": "Westland Hardlopen",
-   "startTimeLocal": "2026-05-31 09:38:20",
-   "type": "running",
-   "distanceKm": 13.21,
-   "durationSeconds": 4060,
-   "averageHR": 144
-  },
-  {
-   "activityName": "Westland Fietsen",
-   "startTimeLocal": "2026-05-30 12:54:14",
-   "type": "cycling",
-   "distanceKm": 4.86,
-   "durationSeconds": 749,
-   "averageHR": 127
-  },
-  {
-   "activityName": "Westland Hardlopen",
-   "startTimeLocal": "2026-05-30 10:05:58",
-   "type": "running",
-   "distanceKm": 4.43,
-   "durationSeconds": 1509,
-   "averageHR": 155
-  },
-  {
-   "activityName": "Westland Hardlopen",
-   "startTimeLocal": "2026-05-30 09:42:09",
-   "type": "running",
-   "distanceKm": 1.23,
-   "durationSeconds": 375,
-   "averageHR": 141
-  },
-  {
-   "activityName": "Westland Fietsen",
-   "startTimeLocal": "2026-05-30 09:20:06",
-   "type": "cycling",
-   "distanceKm": 5.89,
-   "durationSeconds": 835,
-   "averageHR": 131
-  },
-  {
-   "activityName": "Westland Hardlopen",
-   "startTimeLocal": "2026-05-29 20:02:02",
-   "type": "running",
-   "distanceKm": 4.72,
-   "durationSeconds": 1406,
-   "averageHR": 139
-  },
-  {
-   "activityName": "Westland Fietsen",
-   "startTimeLocal": "2026-05-28 21:23:06",
-   "type": "cycling",
-   "distanceKm": 9.53,
-   "durationSeconds": 1575,
-   "averageHR": 104
-  },
-  {
-   "activityName": "Westland Fietsen",
-   "startTimeLocal": "2026-05-28 17:56:24",
-   "type": "cycling",
-   "distanceKm": 9.64,
-   "durationSeconds": 3344,
-   "averageHR": 91
-  },
-  {
-   "activityName": "Westland Hardlopen",
-   "startTimeLocal": "2026-05-27 20:41:24",
-   "type": "running",
-   "distanceKm": 1.17,
-   "durationSeconds": 281,
-   "averageHR": 145
-  },
-  {
-   "activityName": "Westland Wandelen",
-   "startTimeLocal": "2026-05-25 20:11:30",
-   "type": "walking",
-   "distanceKm": 5.04,
-   "durationSeconds": 4010,
-   "averageHR": 87
-  },
-  {
-   "activityName": "Rotterdam Hardlopen",
-   "startTimeLocal": "2026-05-25 09:09:30",
-   "type": "running",
-   "distanceKm": 15.31,
-   "durationSeconds": 5326,
-   "averageHR": 138
-  },
-  {
-   "activityName": "Westland Wandelen",
-   "startTimeLocal": "2026-05-24 20:13:46",
-   "type": "walking",
-   "distanceKm": 4.01,
-   "durationSeconds": 3885,
-   "averageHR": 87
-  },
-  {
-   "activityName": "Westland Hardlopen",
-   "startTimeLocal": "2026-05-24 09:13:57",
-   "type": "running",
-   "distanceKm": 21.13,
-   "durationSeconds": 6520,
-   "averageHR": 152
-  },
-  {
-   "activityName": "Westland Fietsen",
-   "startTimeLocal": "2026-05-24 00:57:46",
-   "type": "cycling",
-   "distanceKm": 5.46,
-   "durationSeconds": 794,
-   "averageHR": 122
-  },
-  {
-   "activityName": "Westland Fietsen",
-   "startTimeLocal": "2026-05-23 14:50:26",
-   "type": "cycling",
-   "distanceKm": 8.24,
-   "durationSeconds": 4161,
-   "averageHR": 99
-  },
-  {
-   "activityName": "Westland Wandelen",
-   "startTimeLocal": "2026-05-23 11:38:10",
-   "type": "walking",
-   "distanceKm": 1.01,
-   "durationSeconds": 735,
-   "averageHR": 88
-  },
-  {
-   "activityName": "Westland Fietsen",
-   "startTimeLocal": "2026-05-22 19:55:59",
-   "type": "cycling",
-   "distanceKm": 25.81,
-   "durationSeconds": 3421,
-   "averageHR": 126
-  },
-  {
-   "activityName": "Westland - 5x 1km anaeroob | 90sec rust",
-   "startTimeLocal": "2026-05-21 19:41:43",
-   "type": "running",
-   "distanceKm": 11.06,
-   "durationSeconds": 3285,
-   "averageHR": 152
-  },
-  {
-   "activityName": "Zwembad",
-   "startTimeLocal": "2026-05-20 07:30:20",
-   "type": "lap_swimming",
-   "distanceKm": 1.43,
-   "durationSeconds": 2521,
-   "averageHR": 135
-  },
-  {
-   "activityName": "Westland Hardlopen",
-   "startTimeLocal": "2026-05-19 19:30:59",
-   "type": "running",
-   "distanceKm": 6.32,
-   "durationSeconds": 2015,
-   "averageHR": 135
-  },
-  {
-   "activityName": "Westland Hardlopen",
-   "startTimeLocal": "2026-05-18 19:35:07",
-   "type": "running",
-   "distanceKm": 12.03,
-   "durationSeconds": 4246,
-   "averageHR": 139
-  },
-  {
-   "activityName": "Boulderen",
-   "startTimeLocal": "2026-05-17 15:17:54",
-   "type": "bouldering",
-   "distanceKm": null,
-   "durationSeconds": 5533,
-   "averageHR": 98
-  },
-  {
-   "activityName": "Krachtsport",
-   "startTimeLocal": "2026-05-16 15:32:22",
-   "type": "strength_training",
-   "distanceKm": null,
-   "durationSeconds": 2550,
-   "averageHR": 113
-  },
-  {
-   "activityName": "Westland Hardlopen",
-   "startTimeLocal": "2026-05-16 15:20:59",
-   "type": "running",
-   "distanceKm": 2.05,
-   "durationSeconds": 560,
-   "averageHR": 166
-  },
-  {
-   "activityName": "Westland Hardlopen",
-   "startTimeLocal": "2026-05-15 17:45:41",
-   "type": "running",
-   "distanceKm": 17.44,
-   "durationSeconds": 5020,
-   "averageHR": 160
-  },
-  {
-   "activityName": "Krachtsport",
-   "startTimeLocal": "2026-05-14 19:03:55",
-   "type": "strength_training",
-   "distanceKm": null,
-   "durationSeconds": 11671,
-   "averageHR": 78
-  },
-  {
-   "activityName": "Westland Fietsen",
-   "startTimeLocal": "2026-05-14 16:26:20",
-   "type": "cycling",
-   "distanceKm": 5.41,
-   "durationSeconds": 893,
-   "averageHR": 112
-  },
-  {
-   "activityName": "Westland Hardlopen",
-   "startTimeLocal": "2026-05-14 10:25:26",
-   "type": "running",
-   "distanceKm": 11.04,
-   "durationSeconds": 3515,
-   "averageHR": 160
-  },
-  {
-   "activityName": "Midden-Delfland Hardlopen",
-   "startTimeLocal": "2026-05-11 19:36:00",
-   "type": "running",
-   "distanceKm": 11.27,
-   "durationSeconds": 4082,
-   "averageHR": 145
-  },
-  {
-   "activityName": "Westland Multisport",
-   "startTimeLocal": "2026-05-10 09:00:10",
-   "type": "multi_sport",
-   "distanceKm": 50.51,
-   "durationSeconds": 9831,
-   "averageHR": null
-  },
-  {
-   "activityName": "Westland Zwemmen in open water",
-   "startTimeLocal": "2026-05-10 08:12:07",
-   "type": "open_water_swimming",
-   "distanceKm": null,
-   "durationSeconds": 15,
-   "averageHR": 80
-  },
-  {
-   "activityName": "Westland Fietsen",
-   "startTimeLocal": "2026-05-09 18:21:08",
-   "type": "cycling",
-   "distanceKm": 5.33,
-   "durationSeconds": 891,
-   "averageHR": 112
-  },
-  {
-   "activityName": "Krachtsport",
-   "startTimeLocal": "2026-05-09 11:41:53",
-   "type": "strength_training",
-   "distanceKm": null,
-   "durationSeconds": 2690,
-   "averageHR": 112
-  },
-  {
-   "activityName": "Westland Fietsen",
-   "startTimeLocal": "2026-05-09 11:24:04",
-   "type": "cycling",
-   "distanceKm": 6.36,
-   "durationSeconds": 883,
-   "averageHR": 118
-  },
-  {
-   "activityName": "Westland Hardlopen",
-   "startTimeLocal": "2026-05-08 17:16:25",
-   "type": "running",
-   "distanceKm": 15.64,
-   "durationSeconds": 4891,
-   "averageHR": 142
-  },
-  {
-   "activityName": "Zwembad",
-   "startTimeLocal": "2026-05-07 07:27:40",
-   "type": "lap_swimming",
-   "distanceKm": 1,
-   "durationSeconds": 2310,
-   "averageHR": 137
-  },
-  {
-   "activityName": "Westland Hardlopen",
-   "startTimeLocal": "2026-05-05 19:50:36",
-   "type": "running",
-   "distanceKm": 4.46,
-   "durationSeconds": 1375,
-   "averageHR": 136
-  },
-  {
-   "activityName": "Rotterdam Hardlopen",
-   "startTimeLocal": "2026-05-04 19:35:25",
-   "type": "running",
-   "distanceKm": 11.61,
-   "durationSeconds": 4165,
-   "averageHR": 135
-  },
-  {
-   "activityName": "Westland Hardlopen",
-   "startTimeLocal": "2026-05-03 19:27:27",
-   "type": "running",
-   "distanceKm": 6.11,
-   "durationSeconds": 1635,
-   "averageHR": 149
-  },
-  {
-   "activityName": "Súdwest-Fryslân Hardlopen",
-   "startTimeLocal": "2026-05-03 11:21:39",
-   "type": "running",
-   "distanceKm": 10.02,
-   "durationSeconds": 3195,
-   "averageHR": 140
-  },
-  {
-   "activityName": "Súdwest-Fryslân Hardlopen",
-   "startTimeLocal": "2026-05-02 11:11:15",
-   "type": "running",
-   "distanceKm": 15.72,
-   "durationSeconds": 5000,
-   "averageHR": 140
-  },
-  {
-   "activityName": "Súdwest-Fryslân Wandelen",
-   "startTimeLocal": "2026-05-02 08:49:15",
-   "type": "walking",
-   "distanceKm": 1.65,
-   "durationSeconds": 1291,
-   "averageHR": 78
-  },
-  {
-   "activityName": "Zwembad",
-   "startTimeLocal": "2026-04-30 08:00:33",
-   "type": "lap_swimming",
-   "distanceKm": 1.8,
-   "durationSeconds": 2581,
-   "averageHR": 140
-  },
-  {
-   "activityName": "Krachtsport",
-   "startTimeLocal": "2026-04-28 19:45:33",
-   "type": "strength_training",
-   "distanceKm": null,
-   "durationSeconds": 3441,
-   "averageHR": 112
-  },
-  {
-   "activityName": "Westland Hardlopen",
-   "startTimeLocal": "2026-04-28 19:32:39",
-   "type": "running",
-   "distanceKm": 2.16,
-   "durationSeconds": 665,
-   "averageHR": 132
-  },
-  {
-   "activityName": "Westland Hardlopen",
-   "startTimeLocal": "2026-04-26 10:28:09",
-   "type": "running",
-   "distanceKm": 14.42,
-   "durationSeconds": 4940,
-   "averageHR": 123
-  },
-  {
-   "activityName": "Krachtsport",
-   "startTimeLocal": "2026-04-25 15:18:13",
-   "type": "strength_training",
-   "distanceKm": null,
-   "durationSeconds": 3110,
-   "averageHR": 109
-  },
-  {
-   "activityName": "Westland Hardlopen",
-   "startTimeLocal": "2026-04-25 15:05:08",
-   "type": "running",
-   "distanceKm": 2.08,
-   "durationSeconds": 600,
-   "averageHR": 136
-  },
-  {
-   "activityName": "Westland - Drempel",
-   "startTimeLocal": "2026-04-24 07:12:39",
-   "type": "running",
-   "distanceKm": 7.22,
-   "durationSeconds": 2005,
-   "averageHR": 164
-  },
-  {
-   "activityName": "Rotterdam Hardlopen",
-   "startTimeLocal": "2026-04-23 20:24:02",
-   "type": "running",
-   "distanceKm": 2.21,
-   "durationSeconds": 656,
-   "averageHR": 110
-  },
-  {
-   "activityName": "Rotterdam Wandelen",
-   "startTimeLocal": "2026-04-23 20:08:32",
-   "type": "walking",
-   "distanceKm": 1.01,
-   "durationSeconds": 757,
-   "averageHR": 73
-  },
-  {
-   "activityName": "Westland - Sprint training 21-1",
-   "startTimeLocal": "2026-04-23 20:00:08",
-   "type": "running",
-   "distanceKm": 1.2,
-   "durationSeconds": 414,
-   "averageHR": 135
-  },
-  {
-   "activityName": "Zwembad",
-   "startTimeLocal": "2026-04-22 08:23:29",
-   "type": "lap_swimming",
-   "distanceKm": 1.58,
-   "durationSeconds": 2415,
-   "averageHR": 131
-  },
-  {
-   "activityName": "Westland Hardlopen",
-   "startTimeLocal": "2026-04-21 20:50:33",
-   "type": "running",
-   "distanceKm": 1.51,
-   "durationSeconds": 490,
-   "averageHR": 135
-  },
-  {
-   "activityName": "Krachtsport",
-   "startTimeLocal": "2026-04-21 20:00:09",
-   "type": "strength_training",
-   "distanceKm": null,
-   "durationSeconds": 3006,
-   "averageHR": 110
-  },
-  {
-   "activityName": "Westland Hardlopen",
-   "startTimeLocal": "2026-04-21 19:45:32",
-   "type": "running",
-   "distanceKm": 2.31,
-   "durationSeconds": 684,
-   "averageHR": 146
-  },
-  {
-   "activityName": "Rotterdam Hardlopen",
-   "startTimeLocal": "2026-04-20 19:35:31",
-   "type": "running",
-   "distanceKm": 11.5,
-   "durationSeconds": 4236,
-   "averageHR": 134
-  },
-  {
-   "activityName": "Krachtsport",
-   "startTimeLocal": "2026-04-19 10:05:04",
-   "type": "strength_training",
-   "distanceKm": null,
-   "durationSeconds": 3380,
-   "averageHR": 103
-  },
-  {
-   "activityName": "Westland Fietsen",
-   "startTimeLocal": "2026-04-18 14:57:21",
-   "type": "cycling",
-   "distanceKm": 16.07,
-   "durationSeconds": 2865,
-   "averageHR": 101
-  },
-  {
-   "activityName": "Westland Wandelen",
-   "startTimeLocal": "2026-04-17 17:06:21",
-   "type": "walking",
-   "distanceKm": 1.81,
-   "durationSeconds": 1031,
-   "averageHR": 88
-  },
-  {
-   "activityName": "Westland Hardlopen",
-   "startTimeLocal": "2026-04-16 19:32:59",
-   "type": "running",
-   "distanceKm": 11.02,
-   "durationSeconds": 3932,
-   "averageHR": 143
-  },
-  {
-   "activityName": "Krachtsport",
-   "startTimeLocal": "2026-04-15 18:09:03",
-   "type": "strength_training",
-   "distanceKm": null,
-   "durationSeconds": 2386,
-   "averageHR": 107
-  },
-  {
-   "activityName": "Hardlopen",
-   "startTimeLocal": "2026-04-15 17:58:22",
-   "type": "running",
-   "distanceKm": 2.09,
-   "durationSeconds": 610,
-   "averageHR": 134
-  },
-  {
-   "activityName": "De Bilt Hardlopen",
-   "startTimeLocal": "2026-04-14 17:49:10",
-   "type": "running",
-   "distanceKm": 6.82,
-   "durationSeconds": 2036,
-   "averageHR": 147
-  },
-  {
-   "activityName": "Westland Hardlopen",
-   "startTimeLocal": "2026-04-13 19:35:06",
-   "type": "running",
-   "distanceKm": 11.54,
-   "durationSeconds": 4365,
-   "averageHR": 135
-  },
-  {
-   "activityName": "Westland Hardlopen",
-   "startTimeLocal": "2026-04-11 08:04:20",
-   "type": "running",
-   "distanceKm": 0.8,
-   "durationSeconds": 251,
-   "averageHR": 125
-  },
-  {
-   "activityName": "Krachtsport",
-   "startTimeLocal": "2026-04-10 19:16:13",
-   "type": "strength_training",
-   "distanceKm": null,
-   "durationSeconds": 3961,
-   "averageHR": 104
-  },
-  {
-   "activityName": "Rotterdam Wandelen",
-   "startTimeLocal": "2026-04-10 17:03:45",
-   "type": "walking",
-   "distanceKm": 1.58,
-   "durationSeconds": 2261,
-   "averageHR": 77
-  },
-  {
-   "activityName": "Westland Wandelen",
-   "startTimeLocal": "2026-04-09 19:54:37",
-   "type": "walking",
-   "distanceKm": 3.16,
-   "durationSeconds": 3170,
-   "averageHR": 81
-  },
-  {
-   "activityName": "Maassluis Hardlopen",
-   "startTimeLocal": "2026-04-08 17:06:36",
-   "type": "running",
-   "distanceKm": 10.22,
-   "durationSeconds": 3095,
-   "averageHR": 150
-  },
-  {
-   "activityName": "Krachtsport",
-   "startTimeLocal": "2026-04-07 18:37:03",
-   "type": "strength_training",
-   "distanceKm": null,
-   "durationSeconds": 3030,
-   "averageHR": 111
-  },
-  {
-   "activityName": "Hardlopen",
-   "startTimeLocal": "2026-04-07 18:24:34",
-   "type": "running",
-   "distanceKm": 2.1,
-   "durationSeconds": 665,
-   "averageHR": 133
-  },
-  {
-   "activityName": "Westland Hardlopen",
-   "startTimeLocal": "2026-04-06 08:05:43",
-   "type": "running",
-   "distanceKm": 12.01,
-   "durationSeconds": 4191,
-   "averageHR": 135
-  },
-  {
-   "activityName": "Westland Hardlopen",
-   "startTimeLocal": "2026-04-04 11:25:17",
-   "type": "running",
-   "distanceKm": 10.51,
-   "durationSeconds": 3061,
-   "averageHR": 150
-  },
-  {
-   "activityName": "Krachtsport",
-   "startTimeLocal": "2026-04-04 10:10:18",
-   "type": "strength_training",
-   "distanceKm": null,
-   "durationSeconds": 3451,
-   "averageHR": 117
-  },
-  {
-   "activityName": "Krachtsport",
-   "startTimeLocal": "2026-04-02 18:21:17",
-   "type": "strength_training",
-   "distanceKm": null,
-   "durationSeconds": 3130,
-   "averageHR": 119
-  },
-  {
-   "activityName": "Hardlopen",
-   "startTimeLocal": "2026-04-02 18:08:33",
-   "type": "running",
-   "distanceKm": 1.9,
-   "durationSeconds": 655,
-   "averageHR": 129
-  }
- ]
+  "generated": "2026-07-15T16:29:09",
+  "daily": [
+    {"date":"2026-07-09","sleep":{"sleepScore":73,"totalSleepMinutes":398,"avgOvernightHrv":50,"restingHeartRate":52},"hr":{"restingHeartRate":52,"lastSevenDaysAvgRestingHeartRate":50},"steps":{"steps":3897}},
+    {"date":"2026-07-10","sleep":{"sleepScore":76,"totalSleepMinutes":425,"avgOvernightHrv":51,"restingHeartRate":54},"hr":{"restingHeartRate":54,"lastSevenDaysAvgRestingHeartRate":51},"steps":{"steps":12077}},
+    {"date":"2026-07-11","sleep":{"sleepScore":41,"totalSleepMinutes":289,"avgOvernightHrv":24,"restingHeartRate":55},"hr":{"restingHeartRate":55,"lastSevenDaysAvgRestingHeartRate":52},"steps":{"steps":13248}},
+    {"date":"2026-07-12","sleep":{"sleepScore":75,"totalSleepMinutes":474,"avgOvernightHrv":37,"restingHeartRate":55},"hr":{"restingHeartRate":55,"lastSevenDaysAvgRestingHeartRate":52},"steps":{"steps":17971}},
+    {"date":"2026-07-13","sleep":{"sleepScore":81,"totalSleepMinutes":416,"avgOvernightHrv":47,"restingHeartRate":50},"hr":{"restingHeartRate":50,"lastSevenDaysAvgRestingHeartRate":52},"steps":{"steps":6147}},
+    {"date":"2026-07-14","sleep":{"sleepScore":87,"totalSleepMinutes":561,"avgOvernightHrv":58,"restingHeartRate":46},"hr":{"restingHeartRate":46,"lastSevenDaysAvgRestingHeartRate":51},"steps":{"steps":17553}},
+    {"date":"2026-07-15","sleep":{"sleepScore":36,"totalSleepMinutes":190,"avgOvernightHrv":44,"restingHeartRate":54},"hr":{"restingHeartRate":54,"lastSevenDaysAvgRestingHeartRate":52},"steps":{"steps":2335}}
+  ],
+  "activities": [
+    {"activityName":"Westland Fietsen","startTimeLocal":"2026-07-14 22:15:00","type":"cycling","distanceKm":6.47,"durationSeconds":1247,"averageHR":106},
+    {"activityName":"Westland Hardlopen","startTimeLocal":"2026-07-14 18:25:31","type":"running","distanceKm":0.96,"durationSeconds":210,"averageHR":162},
+    {"activityName":"Den Haag Hardlopen","startTimeLocal":"2026-07-14 08:30:22","type":"running","distanceKm":10.56,"durationSeconds":3260,"averageHR":144},
+    {"activityName":"Zwembad","startTimeLocal":"2026-07-13 07:31:35","type":"lap_swimming","distanceKm":1.23,"durationSeconds":2035,"averageHR":117},
+    {"activityName":"Westland Hardlopen","startTimeLocal":"2026-07-12 22:05:02","type":"running","distanceKm":7.05,"durationSeconds":2100,"averageHR":138},
+    {"activityName":"Westland Hardlopen","startTimeLocal":"2026-07-12 13:48:09","type":"running","distanceKm":10.7,"durationSeconds":3070,"averageHR":141},
+    {"activityName":"Den Haag Fietsen","startTimeLocal":"2026-07-12 00:22:15","type":"cycling","distanceKm":8.85,"durationSeconds":2125,"averageHR":66},
+    {"activityName":"Westland Fietsen","startTimeLocal":"2026-07-10 19:58:57","type":"cycling","distanceKm":6.33,"durationSeconds":971,"averageHR":128},
+    {"activityName":"Den Haag - Interval 7 juli 2026","startTimeLocal":"2026-07-08 16:50:02","type":"running","distanceKm":11.36,"durationSeconds":3300,"averageHR":150},
+    {"activityName":"Zwembad","startTimeLocal":"2026-07-07 08:16:52","type":"lap_swimming","distanceKm":1.1,"durationSeconds":2115,"averageHR":121},
+    {"activityName":"Westland Hardlopen","startTimeLocal":"2026-07-06 19:37:59","type":"running","distanceKm":11.56,"durationSeconds":4310,"averageHR":136},
+    {"activityName":"Raalte Hardlopen","startTimeLocal":"2026-07-05 17:00:09","type":"running","distanceKm":7.03,"durationSeconds":2065,"averageHR":145},
+    {"activityName":"Raalte Hardlopen","startTimeLocal":"2026-07-04 07:46:32","type":"running","distanceKm":21.22,"durationSeconds":7385,"averageHR":129},
+    {"activityName":"Rotterdam Hardlopen","startTimeLocal":"2026-06-29 19:37:09","type":"running","distanceKm":12.06,"durationSeconds":4115,"averageHR":144},
+    {"activityName":"Zwembad","startTimeLocal":"2026-06-29 07:30:37","type":"lap_swimming","distanceKm":2,"durationSeconds":3141,"averageHR":131},
+    {"activityName":"Den Haag Fietsen","startTimeLocal":"2026-06-28 20:38:50","type":"cycling","distanceKm":8.98,"durationSeconds":1863,"averageHR":74},
+    {"activityName":"Westland Fietsen","startTimeLocal":"2026-06-28 16:51:34","type":"cycling","distanceKm":8.64,"durationSeconds":1287,"averageHR":115},
+    {"activityName":"Westland Fietsen","startTimeLocal":"2026-06-28 12:13:50","type":"cycling","distanceKm":1.89,"durationSeconds":279,"averageHR":126},
+    {"activityName":"Westland Hardlopen","startTimeLocal":"2026-06-28 09:42:04","type":"running","distanceKm":24.31,"durationSeconds":7636,"averageHR":147},
+    {"activityName":"Rotterdam Fietsen","startTimeLocal":"2026-06-27 02:41:52","type":"cycling","distanceKm":30.05,"durationSeconds":4869,"averageHR":109},
+    {"activityName":"Rotterdam Zwemmen in open water","startTimeLocal":"2026-06-26 18:40:23","type":"open_water_swimming","distanceKm":0.75,"durationSeconds":1176,"averageHR":137},
+    {"activityName":"Rotterdam Fietsen","startTimeLocal":"2026-06-26 18:18:19","type":"cycling","distanceKm":2.09,"durationSeconds":425,"averageHR":115},
+    {"activityName":"Maassluis Fietsen","startTimeLocal":"2026-06-26 00:18:37","type":"cycling","distanceKm":12.49,"durationSeconds":1823,"averageHR":122},
+    {"activityName":"Westland Fietsen","startTimeLocal":"2026-06-25 08:52:05","type":"cycling","distanceKm":12.52,"durationSeconds":1777,"averageHR":129},
+    {"activityName":"Zwembad","startTimeLocal":"2026-06-25 07:14:38","type":"lap_swimming","distanceKm":2.05,"durationSeconds":3255,"averageHR":129},
+    {"activityName":"Westland Hardlopen","startTimeLocal":"2026-06-24 06:52:39","type":"running","distanceKm":14.35,"durationSeconds":4560,"averageHR":140},
+    {"activityName":"Westland Hardlopen","startTimeLocal":"2026-06-23 16:41:59","type":"running","distanceKm":4.02,"durationSeconds":1250,"averageHR":135},
+    {"activityName":"Westland Fietsen","startTimeLocal":"2026-06-23 08:53:53","type":"cycling","distanceKm":2.98,"durationSeconds":523,"averageHR":118},
+    {"activityName":"Zwembad","startTimeLocal":"2026-06-23 07:39:41","type":"lap_swimming","distanceKm":2,"durationSeconds":3110,"averageHR":140},
+    {"activityName":"Westland Fietsen","startTimeLocal":"2026-06-23 07:23:22","type":"cycling","distanceKm":2.93,"durationSeconds":431,"averageHR":115},
+    {"activityName":"Westland Hardlopen","startTimeLocal":"2026-06-22 19:36:56","type":"running","distanceKm":11.67,"durationSeconds":4221,"averageHR":137},
+    {"activityName":"Westland Hardlopen","startTimeLocal":"2026-06-20 08:16:32","type":"running","distanceKm":22.4,"durationSeconds":8185,"averageHR":148},
+    {"activityName":"Zwembad","startTimeLocal":"2026-06-18 07:30:38","type":"lap_swimming","distanceKm":2.05,"durationSeconds":3230,"averageHR":136},
+    {"activityName":"Den Haag Hardlopen","startTimeLocal":"2026-06-17 17:00:02","type":"running","distanceKm":8.34,"durationSeconds":2566,"averageHR":137},
+    {"activityName":"Zwembad","startTimeLocal":"2026-06-16 08:08:52","type":"lap_swimming","distanceKm":2.03,"durationSeconds":3590,"averageHR":130},
+    {"activityName":"Midden-Delfland Hardlopen","startTimeLocal":"2026-06-15 19:39:21","type":"running","distanceKm":12.7,"durationSeconds":4120,"averageHR":135},
+    {"activityName":"Westland Wandelen","startTimeLocal":"2026-06-14 14:35:40","type":"walking","distanceKm":3.44,"durationSeconds":2640,"averageHR":82},
+    {"activityName":"Delft Wandelen","startTimeLocal":"2026-06-13 23:04:52","type":"walking","distanceKm":2.03,"durationSeconds":1341,"averageHR":98},
+    {"activityName":"Den Haag Hardlopen","startTimeLocal":"2026-06-13 10:20:19","type":"running","distanceKm":13.32,"durationSeconds":4080,"averageHR":141},
+    {"activityName":"Westland Hardlopen","startTimeLocal":"2026-06-11 17:05:54","type":"running","distanceKm":8.11,"durationSeconds":2521,"averageHR":146},
+    {"activityName":"Westland Fietsen","startTimeLocal":"2026-06-11 08:23:06","type":"cycling","distanceKm":2.98,"durationSeconds":481,"averageHR":114},
+    {"activityName":"Zwembad","startTimeLocal":"2026-06-11 07:17:44","type":"lap_swimming","distanceKm":2.03,"durationSeconds":2990,"averageHR":139},
+    {"activityName":"Westland Fietsen","startTimeLocal":"2026-06-11 06:59:17","type":"cycling","distanceKm":2.94,"durationSeconds":479,"averageHR":112},
+    {"activityName":"Westland Fietsen","startTimeLocal":"2026-06-09 19:49:49","type":"cycling","distanceKm":4.76,"durationSeconds":717,"averageHR":104},
+    {"activityName":"Westland Fietsen","startTimeLocal":"2026-06-09 08:17:03","type":"cycling","distanceKm":5.31,"durationSeconds":781,"averageHR":126},
+    {"activityName":"Zwembad","startTimeLocal":"2026-06-09 07:02:43","type":"lap_swimming","distanceKm":2.05,"durationSeconds":3000,"averageHR":123},
+    {"activityName":"Westland Fietsen","startTimeLocal":"2026-06-09 06:45:21","type":"cycling","distanceKm":3.17,"durationSeconds":542,"averageHR":87},
+    {"activityName":"Westland Hardlopen","startTimeLocal":"2026-06-08 19:34:26","type":"running","distanceKm":12.18,"durationSeconds":4180,"averageHR":131},
+    {"activityName":"Westland Hardlopen","startTimeLocal":"2026-06-07 14:43:46","type":"running","distanceKm":5.06,"durationSeconds":1570,"averageHR":134},
+    {"activityName":"Westland Fietsen","startTimeLocal":"2026-06-06 15:02:16","type":"cycling","distanceKm":1.31,"durationSeconds":272,"averageHR":109},
+    {"activityName":"HIIT","startTimeLocal":"2026-06-06 13:58:11","type":"hiit","distanceKm":null,"durationSeconds":2900,"averageHR":133},
+    {"activityName":"Westland Fietsen","startTimeLocal":"2026-06-06 13:24:36","type":"cycling","distanceKm":5.49,"durationSeconds":940,"averageHR":121},
+    {"activityName":"Westland Fietsen","startTimeLocal":"2026-06-05 23:18:39","type":"cycling","distanceKm":6.09,"durationSeconds":970,"averageHR":78},
+    {"activityName":"Westland Fietsen","startTimeLocal":"2026-06-05 20:21:09","type":"cycling","distanceKm":5.31,"durationSeconds":970,"averageHR":123},
+    {"activityName":"Den Haag Fietsen","startTimeLocal":"2026-06-05 18:52:20","type":"cycling","distanceKm":2.17,"durationSeconds":401,"averageHR":120},
+    {"activityName":"Den Haag - Interval training 5 juni","startTimeLocal":"2026-06-05 17:37:27","type":"running","distanceKm":11.07,"durationSeconds":3340,"averageHR":154},
+    {"activityName":"Zwembad","startTimeLocal":"2026-06-04 07:44:17","type":"lap_swimming","distanceKm":1.6,"durationSeconds":2430,"averageHR":127},
+    {"activityName":"Westland Hardlopen","startTimeLocal":"2026-06-02 17:00:45","type":"running","distanceKm":17.02,"durationSeconds":5136,"averageHR":144},
+    {"activityName":"Westland Hardlopen","startTimeLocal":"2026-06-01 19:36:15","type":"running","distanceKm":13.05,"durationSeconds":4056,"averageHR":145},
+    {"activityName":"Westland Wandelen","startTimeLocal":"2026-06-01 17:02:26","type":"walking","distanceKm":0.71,"durationSeconds":1035,"averageHR":78},
+    {"activityName":"Arnhem Wandelen","startTimeLocal":"2026-05-31 14:12:58","type":"walking","distanceKm":1,"durationSeconds":1065,"averageHR":91},
+    {"activityName":"Westland Hardlopen","startTimeLocal":"2026-05-31 09:38:20","type":"running","distanceKm":13.21,"durationSeconds":4060,"averageHR":144},
+    {"activityName":"Westland Fietsen","startTimeLocal":"2026-05-30 12:54:14","type":"cycling","distanceKm":4.86,"durationSeconds":749,"averageHR":127},
+    {"activityName":"Westland Hardlopen","startTimeLocal":"2026-05-30 10:05:58","type":"running","distanceKm":4.43,"durationSeconds":1509,"averageHR":155},
+    {"activityName":"Westland Hardlopen","startTimeLocal":"2026-05-30 09:42:09","type":"running","distanceKm":1.23,"durationSeconds":375,"averageHR":141},
+    {"activityName":"Westland Fietsen","startTimeLocal":"2026-05-30 09:20:06","type":"cycling","distanceKm":5.89,"durationSeconds":835,"averageHR":131},
+    {"activityName":"Westland Hardlopen","startTimeLocal":"2026-05-29 20:02:02","type":"running","distanceKm":4.72,"durationSeconds":1406,"averageHR":139},
+    {"activityName":"Westland Fietsen","startTimeLocal":"2026-05-28 21:23:06","type":"cycling","distanceKm":9.53,"durationSeconds":1575,"averageHR":104},
+    {"activityName":"Westland Fietsen","startTimeLocal":"2026-05-28 17:56:24","type":"cycling","distanceKm":9.64,"durationSeconds":3344,"averageHR":91},
+    {"activityName":"Westland Hardlopen","startTimeLocal":"2026-05-27 20:41:24","type":"running","distanceKm":1.17,"durationSeconds":281,"averageHR":145},
+    {"activityName":"Westland Wandelen","startTimeLocal":"2026-05-25 20:11:30","type":"walking","distanceKm":5.04,"durationSeconds":4010,"averageHR":87},
+    {"activityName":"Rotterdam Hardlopen","startTimeLocal":"2026-05-25 09:09:30","type":"running","distanceKm":15.31,"durationSeconds":5326,"averageHR":138},
+    {"activityName":"Westland Wandelen","startTimeLocal":"2026-05-24 20:13:46","type":"walking","distanceKm":4.01,"durationSeconds":3885,"averageHR":87},
+    {"activityName":"Westland Hardlopen","startTimeLocal":"2026-05-24 09:13:57","type":"running","distanceKm":21.13,"durationSeconds":6520,"averageHR":152},
+    {"activityName":"Westland Fietsen","startTimeLocal":"2026-05-24 00:57:46","type":"cycling","distanceKm":5.46,"durationSeconds":794,"averageHR":122},
+    {"activityName":"Westland Fietsen","startTimeLocal":"2026-05-23 14:50:26","type":"cycling","distanceKm":8.24,"durationSeconds":4161,"averageHR":99},
+    {"activityName":"Westland Wandelen","startTimeLocal":"2026-05-23 11:38:10","type":"walking","distanceKm":1.01,"durationSeconds":735,"averageHR":88},
+    {"activityName":"Westland Fietsen","startTimeLocal":"2026-05-22 19:55:59","type":"cycling","distanceKm":25.81,"durationSeconds":3421,"averageHR":126},
+    {"activityName":"Westland - 5x 1km anaeroob | 90sec rust","startTimeLocal":"2026-05-21 19:41:43","type":"running","distanceKm":11.06,"durationSeconds":3285,"averageHR":152},
+    {"activityName":"Zwembad","startTimeLocal":"2026-05-20 07:30:20","type":"lap_swimming","distanceKm":1.43,"durationSeconds":2521,"averageHR":135},
+    {"activityName":"Westland Hardlopen","startTimeLocal":"2026-05-19 19:30:59","type":"running","distanceKm":6.32,"durationSeconds":2015,"averageHR":135},
+    {"activityName":"Westland Hardlopen","startTimeLocal":"2026-05-18 19:35:07","type":"running","distanceKm":12.03,"durationSeconds":4246,"averageHR":139},
+    {"activityName":"Boulderen","startTimeLocal":"2026-05-17 15:17:54","type":"bouldering","distanceKm":null,"durationSeconds":5533,"averageHR":98},
+    {"activityName":"Krachtsport","startTimeLocal":"2026-05-16 15:32:22","type":"strength_training","distanceKm":null,"durationSeconds":2550,"averageHR":113},
+    {"activityName":"Westland Hardlopen","startTimeLocal":"2026-05-16 15:20:59","type":"running","distanceKm":2.05,"durationSeconds":560,"averageHR":166},
+    {"activityName":"Westland Hardlopen","startTimeLocal":"2026-05-15 17:45:41","type":"running","distanceKm":17.44,"durationSeconds":5020,"averageHR":160},
+    {"activityName":"Krachtsport","startTimeLocal":"2026-05-14 19:03:55","type":"strength_training","distanceKm":null,"durationSeconds":11671,"averageHR":78},
+    {"activityName":"Westland Fietsen","startTimeLocal":"2026-05-14 16:26:20","type":"cycling","distanceKm":5.41,"durationSeconds":893,"averageHR":112},
+    {"activityName":"Westland Hardlopen","startTimeLocal":"2026-05-14 10:25:26","type":"running","distanceKm":11.04,"durationSeconds":3515,"averageHR":160},
+    {"activityName":"Midden-Delfland Hardlopen","startTimeLocal":"2026-05-11 19:36:00","type":"running","distanceKm":11.27,"durationSeconds":4082,"averageHR":145},
+    {"activityName":"Westland Multisport","startTimeLocal":"2026-05-10 09:00:10","type":"multi_sport","distanceKm":50.51,"durationSeconds":9831,"averageHR":null},
+    {"activityName":"Westland Zwemmen in open water","startTimeLocal":"2026-05-10 08:12:07","type":"open_water_swimming","distanceKm":null,"durationSeconds":15,"averageHR":80},
+    {"activityName":"Westland Fietsen","startTimeLocal":"2026-05-09 18:21:08","type":"cycling","distanceKm":5.33,"durationSeconds":891,"averageHR":112},
+    {"activityName":"Krachtsport","startTimeLocal":"2026-05-09 11:41:53","type":"strength_training","distanceKm":null,"durationSeconds":2690,"averageHR":112},
+    {"activityName":"Westland Fietsen","startTimeLocal":"2026-05-09 11:24:04","type":"cycling","distanceKm":6.36,"durationSeconds":883,"averageHR":118},
+    {"activityName":"Westland Hardlopen","startTimeLocal":"2026-05-08 17:16:25","type":"running","distanceKm":15.64,"durationSeconds":4891,"averageHR":142},
+    {"activityName":"Zwembad","startTimeLocal":"2026-05-07 07:27:40","type":"lap_swimming","distanceKm":1,"durationSeconds":2310,"averageHR":137},
+    {"activityName":"Westland Hardlopen","startTimeLocal":"2026-05-05 19:50:36","type":"running","distanceKm":4.46,"durationSeconds":1375,"averageHR":136},
+    {"activityName":"Rotterdam Hardlopen","startTimeLocal":"2026-05-04 19:35:25","type":"running","distanceKm":11.61,"durationSeconds":4165,"averageHR":135},
+    {"activityName":"Westland Hardlopen","startTimeLocal":"2026-05-03 19:27:27","type":"running","distanceKm":6.11,"durationSeconds":1635,"averageHR":149},
+    {"activityName":"Súdwest-Fryslân Hardlopen","startTimeLocal":"2026-05-03 11:21:39","type":"running","distanceKm":10.02,"durationSeconds":3195,"averageHR":140},
+    {"activityName":"Súdwest-Fryslân Hardlopen","startTimeLocal":"2026-05-02 11:11:15","type":"running","distanceKm":15.72,"durationSeconds":5000,"averageHR":140},
+    {"activityName":"Súdwest-Fryslân Wandelen","startTimeLocal":"2026-05-02 08:49:15","type":"walking","distanceKm":1.65,"durationSeconds":1291,"averageHR":78},
+    {"activityName":"Zwembad","startTimeLocal":"2026-04-30 08:00:33","type":"lap_swimming","distanceKm":1.8,"durationSeconds":2581,"averageHR":140},
+    {"activityName":"Krachtsport","startTimeLocal":"2026-04-28 19:45:33","type":"strength_training","distanceKm":null,"durationSeconds":3441,"averageHR":112},
+    {"activityName":"Westland Hardlopen","startTimeLocal":"2026-04-28 19:32:39","type":"running","distanceKm":2.16,"durationSeconds":665,"averageHR":132},
+    {"activityName":"Westland Hardlopen","startTimeLocal":"2026-04-26 10:28:09","type":"running","distanceKm":14.42,"durationSeconds":4940,"averageHR":123},
+    {"activityName":"Krachtsport","startTimeLocal":"2026-04-25 15:18:13","type":"strength_training","distanceKm":null,"durationSeconds":3110,"averageHR":109},
+    {"activityName":"Westland Hardlopen","startTimeLocal":"2026-04-25 15:05:08","type":"running","distanceKm":2.08,"durationSeconds":600,"averageHR":136},
+    {"activityName":"Westland - Drempel","startTimeLocal":"2026-04-24 07:12:39","type":"running","distanceKm":7.22,"durationSeconds":2005,"averageHR":164},
+    {"activityName":"Rotterdam Hardlopen","startTimeLocal":"2026-04-23 20:24:02","type":"running","distanceKm":2.21,"durationSeconds":656,"averageHR":110},
+    {"activityName":"Rotterdam Wandelen","startTimeLocal":"2026-04-23 20:08:32","type":"walking","distanceKm":1.01,"durationSeconds":757,"averageHR":73},
+    {"activityName":"Westland - Sprint training 21-1","startTimeLocal":"2026-04-23 20:00:08","type":"running","distanceKm":1.2,"durationSeconds":414,"averageHR":135},
+    {"activityName":"Zwembad","startTimeLocal":"2026-04-22 08:23:29","type":"lap_swimming","distanceKm":1.58,"durationSeconds":2415,"averageHR":131},
+    {"activityName":"Westland Hardlopen","startTimeLocal":"2026-04-21 20:50:33","type":"running","distanceKm":1.51,"durationSeconds":490,"averageHR":135},
+    {"activityName":"Krachtsport","startTimeLocal":"2026-04-21 20:00:09","type":"strength_training","distanceKm":null,"durationSeconds":3006,"averageHR":110},
+    {"activityName":"Westland Hardlopen","startTimeLocal":"2026-04-21 19:45:32","type":"running","distanceKm":2.31,"durationSeconds":684,"averageHR":146},
+    {"activityName":"Rotterdam Hardlopen","startTimeLocal":"2026-04-20 19:35:31","type":"running","distanceKm":11.5,"durationSeconds":4236,"averageHR":134},
+    {"activityName":"Krachtsport","startTimeLocal":"2026-04-19 10:05:04","type":"strength_training","distanceKm":null,"durationSeconds":3380,"averageHR":103},
+    {"activityName":"Westland Fietsen","startTimeLocal":"2026-04-18 14:57:21","type":"cycling","distanceKm":16.07,"durationSeconds":2865,"averageHR":101},
+    {"activityName":"Westland Wandelen","startTimeLocal":"2026-04-17 17:06:21","type":"walking","distanceKm":1.81,"durationSeconds":1031,"averageHR":88},
+    {"activityName":"Westland Hardlopen","startTimeLocal":"2026-04-16 19:32:59","type":"running","distanceKm":11.02,"durationSeconds":3932,"averageHR":143},
+    {"activityName":"Krachtsport","startTimeLocal":"2026-04-15 18:09:03","type":"strength_training","distanceKm":null,"durationSeconds":2386,"averageHR":107},
+    {"activityName":"Hardlopen","startTimeLocal":"2026-04-15 17:58:22","type":"running","distanceKm":2.09,"durationSeconds":610,"averageHR":134},
+    {"activityName":"De Bilt Hardlopen","startTimeLocal":"2026-04-14 17:49:10","type":"running","distanceKm":6.82,"durationSeconds":2036,"averageHR":147},
+    {"activityName":"Westland Hardlopen","startTimeLocal":"2026-04-13 19:35:06","type":"running","distanceKm":11.54,"durationSeconds":4365,"averageHR":135},
+    {"activityName":"Westland Hardlopen","startTimeLocal":"2026-04-11 08:04:20","type":"running","distanceKm":0.8,"durationSeconds":251,"averageHR":125},
+    {"activityName":"Krachtsport","startTimeLocal":"2026-04-10 19:16:13","type":"strength_training","distanceKm":null,"durationSeconds":3961,"averageHR":104},
+    {"activityName":"Rotterdam Wandelen","startTimeLocal":"2026-04-10 17:03:45","type":"walking","distanceKm":1.58,"durationSeconds":2261,"averageHR":77},
+    {"activityName":"Westland Wandelen","startTimeLocal":"2026-04-09 19:54:37","type":"walking","distanceKm":3.16,"durationSeconds":3170,"averageHR":81},
+    {"activityName":"Maassluis Hardlopen","startTimeLocal":"2026-04-08 17:06:36","type":"running","distanceKm":10.22,"durationSeconds":3095,"averageHR":150},
+    {"activityName":"Krachtsport","startTimeLocal":"2026-04-07 18:37:03","type":"strength_training","distanceKm":null,"durationSeconds":3030,"averageHR":111},
+    {"activityName":"Hardlopen","startTimeLocal":"2026-04-07 18:24:34","type":"running","distanceKm":2.1,"durationSeconds":665,"averageHR":133},
+    {"activityName":"Westland Hardlopen","startTimeLocal":"2026-04-06 08:05:43","type":"running","distanceKm":12.01,"durationSeconds":4191,"averageHR":135},
+    {"activityName":"Westland Hardlopen","startTimeLocal":"2026-04-04 11:25:17","type":"running","distanceKm":10.51,"durationSeconds":3061,"averageHR":150},
+    {"activityName":"Krachtsport","startTimeLocal":"2026-04-04 10:10:18","type":"strength_training","distanceKm":null,"durationSeconds":3451,"averageHR":117},
+    {"activityName":"Krachtsport","startTimeLocal":"2026-04-02 18:21:17","type":"strength_training","distanceKm":null,"durationSeconds":3130,"averageHR":119},
+    {"activityName":"Hardlopen","startTimeLocal":"2026-04-02 18:08:33","type":"running","distanceKm":1.9,"durationSeconds":655,"averageHR":129}
+  ]
 }
