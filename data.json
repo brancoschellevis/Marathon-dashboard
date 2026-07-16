@@ -1,13 +1,13 @@
 {
-  "generated": "2026-07-15T16:29:09",
+  "generated": "2026-07-16T09:59:14",
   "daily": [
-    {"date":"2026-07-09","sleep":{"sleepScore":73,"totalSleepMinutes":398,"avgOvernightHrv":50,"restingHeartRate":52},"hr":{"restingHeartRate":52,"lastSevenDaysAvgRestingHeartRate":50},"steps":{"steps":3897}},
     {"date":"2026-07-10","sleep":{"sleepScore":76,"totalSleepMinutes":425,"avgOvernightHrv":51,"restingHeartRate":54},"hr":{"restingHeartRate":54,"lastSevenDaysAvgRestingHeartRate":51},"steps":{"steps":12077}},
     {"date":"2026-07-11","sleep":{"sleepScore":41,"totalSleepMinutes":289,"avgOvernightHrv":24,"restingHeartRate":55},"hr":{"restingHeartRate":55,"lastSevenDaysAvgRestingHeartRate":52},"steps":{"steps":13248}},
     {"date":"2026-07-12","sleep":{"sleepScore":75,"totalSleepMinutes":474,"avgOvernightHrv":37,"restingHeartRate":55},"hr":{"restingHeartRate":55,"lastSevenDaysAvgRestingHeartRate":52},"steps":{"steps":17971}},
     {"date":"2026-07-13","sleep":{"sleepScore":81,"totalSleepMinutes":416,"avgOvernightHrv":47,"restingHeartRate":50},"hr":{"restingHeartRate":50,"lastSevenDaysAvgRestingHeartRate":52},"steps":{"steps":6147}},
     {"date":"2026-07-14","sleep":{"sleepScore":87,"totalSleepMinutes":561,"avgOvernightHrv":58,"restingHeartRate":46},"hr":{"restingHeartRate":46,"lastSevenDaysAvgRestingHeartRate":51},"steps":{"steps":17553}},
-    {"date":"2026-07-15","sleep":{"sleepScore":36,"totalSleepMinutes":190,"avgOvernightHrv":44,"restingHeartRate":54},"hr":{"restingHeartRate":54,"lastSevenDaysAvgRestingHeartRate":52},"steps":{"steps":2335}}
+    {"date":"2026-07-15","sleep":{"sleepScore":36,"totalSleepMinutes":190,"avgOvernightHrv":44,"restingHeartRate":54},"hr":{"restingHeartRate":54,"lastSevenDaysAvgRestingHeartRate":52},"steps":{"steps":5562}},
+    {"date":"2026-07-16","sleep":{"sleepScore":84,"totalSleepMinutes":502,"avgOvernightHrv":44,"restingHeartRate":52},"hr":{"restingHeartRate":52,"lastSevenDaysAvgRestingHeartRate":52},"steps":{"steps":40}}
   ],
   "activities": [
     {"activityName":"Westland Fietsen","startTimeLocal":"2026-07-14 22:15:00","type":"cycling","distanceKm":6.47,"durationSeconds":1247,"averageHR":106},
