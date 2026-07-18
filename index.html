@@ -186,6 +186,7 @@ table.gridjs-table{font-size:12px;font-family:'Montserrat',sans-serif;background
 const RACE = new Date('2026-11-01T09:00:00');
 const GOAL_S = 3*3600 + 5*60, GOAL_PACE = GOAL_S/42.195;
 const paceOf = a => a.durationSeconds/a.distanceKm;
+const isRun = a => ['running','trail_running','ultra_run'].includes(a.type);
 // benchmarks: [uiterlijk-op, label, testfunctie op een run]
 const BENCH = [
   ['2026-07-31','10 km ≤ 41:00',        a=>a.distanceKm>=9.5 && paceOf(a)<=246],
@@ -231,7 +232,7 @@ Chart.defaults.font.weight = 500;
 Chart.defaults.plugins.legend.labels.boxWidth = 12;
 
 function build(acts,daily){
-  const runs = acts.filter(a=>a.type==='running' && a.distanceKm);
+  const runs = acts.filter(a=>isRun(a) && a.distanceKm);
   const now = new Date();
   const daysLeft = Math.ceil((RACE-now)/864e5);
 
@@ -252,7 +253,7 @@ function build(acts,daily){
     const w = isoD(weekStart(dt(a.startTimeLocal)));
     if(!weeks.has(w)) weeks.set(w,{runKm:0,runS:0,easy:0,tempo:0,hard:0,cross:{}});
     const o = weeks.get(w);
-    if(a.type==='running'){
+    if(isRun(a)){
       o.runKm+=a.distanceKm||0; o.runS+=a.durationSeconds||0;
       const hr=a.averageHR, km=a.distanceKm||0;
       if(!hr||hr<=ZONE_EASY) o.easy+=km; else if(hr<=ZONE_TEMPO) o.tempo+=km; else o.hard+=km;
@@ -366,7 +367,7 @@ function build(acts,daily){
   // belasting
   const acwrCls=acwr==null?'':acwr<0.8?'warn':acwr<=1.3?'good':'bad';
   const acwrTxt=acwr==null?'–':acwr<0.8?'ruimte voor meer':acwr<=1.3?'gebalanceerd':'let op: piek in belasting';
-  const crossH=acts.filter(a=>a.type!=='running'&&dt(a.startTimeLocal)>=new Date(now-7*864e5)).reduce((s,a)=>s+(a.durationSeconds||0)/3600,0);
+  const crossH=acts.filter(a=>!isRun(a)&&dt(a.startTimeLocal)>=new Date(now-7*864e5)).reduce((s,a)=>s+(a.durationSeconds||0)/3600,0);
   $('load').innerHTML=`
     <div style="font-size:30px;font-weight:800">${acwr?acwr.toFixed(2):'–'} <span class="badge ${acwrCls}">${acwrTxt}</span></div>
     <div class="sub" style="margin:6px 0 10px">Acute:chronische ratio — 7d ${acute.toFixed(0)} km vs 4-weeks gem. ${chronic.toFixed(0)} km/wk. Veilig: 0,8–1,3.</div>
@@ -412,14 +413,14 @@ function build(acts,daily){
     options:{responsive:true,maintainAspectRatio:false,scales:{x:{stacked:true},y:{stacked:true,title:{display:true,text:'uren'}}}}});
 
   // tabel
-  const typeNL=t=>({running:'Hardlopen',cycling:'Fietsen',lap_swimming:'Zwemmen',open_water_swimming:'Zwemmen (ow)',strength_training:'Kracht',walking:'Wandelen',hiit:'HIIT',bouldering:'Boulderen',multi_sport:'Multisport',trail_running:'Trail',resort_skiing:'Skiën',hiking:'Hiken',indoor_cycling:'Indoor fietsen'})[t]||t;
+  const typeNL=t=>({running:'Hardlopen',cycling:'Fietsen',lap_swimming:'Zwemmen',open_water_swimming:'Zwemmen (ow)',strength_training:'Kracht',walking:'Wandelen',hiit:'HIIT',bouldering:'Boulderen',multi_sport:'Multisport',trail_running:'Trail',ultra_run:'Ultra',resort_skiing:'Skiën',hiking:'Hiken',indoor_cycling:'Indoor fietsen'})[t]||t;
   new gridjs.Grid({
     columns:['Datum','Activiteit','Type',{name:'km',formatter:v=>v??'–'},'Tempo/duur','HR'],
     data:acts.slice(0,40).map(a=>[
       dt(a.startTimeLocal).toLocaleDateString('nl-NL',{day:'2-digit',month:'short'}),
       a.activityName, typeNL(a.type),
       a.distanceKm?a.distanceKm.toFixed(2):null,
-      a.type==='running'&&a.distanceKm?fmtPace(a.durationSeconds/a.distanceKm):fmtDur(a.durationSeconds),
+      isRun(a)&&a.distanceKm?fmtPace(a.durationSeconds/a.distanceKm):fmtDur(a.durationSeconds),
       a.averageHR||'–']),
     sort:true, pagination:{limit:10}, style:{th:{padding:'8px 10px'},td:{padding:'6px 10px'}}
   }).render($('acts'));
